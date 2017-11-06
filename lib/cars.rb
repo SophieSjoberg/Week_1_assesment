@@ -1,12 +1,16 @@
 class Car
 
-attr_accessor :color, :car
-def initialize
-  @car = true
-  @color = 'red'
-end
+attr_accessor :vehicle
 
-def paint(color)
-@color = color
-end
+  def initialize
+    @vehicle = { wheel: 5, max_speed: 160, color: 'red' }
+  end
+
+  def paint(color)
+    @vehicle[:color] = color
+  end
+
+  def driver(driver)
+    @vehicle[:driver] = driver
+  end
 end
